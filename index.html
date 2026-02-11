@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graças Advocacia e Assessoria Jurídica | Dra. Fernanda Gabriela das Graças OAB/SP 385.718</title>
+    <meta name="description" content="Assessoria especializada em Direito Previdenciário, Tributário e Cível. Soluções jurídicas inovadoras em Três Lagoas, MS. Aposentadorias, revisões e benefícios INSS.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-black: #000000;
+            --primary-white: #FFFFFF;
+            --gold-accent: #D4AF37;
+            --whatsapp-green: #25D366;
+            --text-light: #666;
+            --shadow-subtle: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: var(--primary-black); overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Header alinhado */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--primary-white);
+            box-shadow: var(--shadow-subtle);
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-black);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.2rem;
+        }
+        .logo .brand-main {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .logo .brand-line {
+            width: 100%;
+            height: 1px;
+            background: var(--gold-accent);
+            margin: 0.2rem 0;
+        }
+        .logo .brand-sub {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+        .logo small {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--primary-black);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--gold-accent);
+        }
+        .social-icons {
+            display: flex;
+            gap: 0.8rem;
+        }
+        .social-icons i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: var(--text-light);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .social-icons i:hover {
+            background: var(--gold-accent);
+            color: var(--primary-white);
+        }
+        .cta-header {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            padding: 0.4rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+        .cta-header:hover {
+            background: var(--gold-accent);
+        }
+
+        /* WhatsApp Fixed */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--whatsapp-green);
+            color: var(--primary-white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-subtle);
+            cursor: pointer;
+            z-index: 1001;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero com fundo escuro sombreado */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)),
+                        url('imagens/fundo-hero.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: var(--primary-white);
+            padding: 0 5%;
+            margin-top: 80px;
+        }
+        .hero-content {
+            max-width: 600px;
+            width: 100%;
+        }
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .cta-hero {
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-fale {
+            background: var(--primary-white);
+            color: var(--primary-black);
+        }
+        .cta-fale:hover {
+            background: var(--gold-accent);
+        }
+        .cta-ligar {
+            background: transparent;
+            color: var(--primary-white);
+            border: 2px solid var(--primary-white);
+        }
+        .cta-ligar:hover {
+            background: var(--primary-white);
+            color: var(--primary-black);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-black);
+        }
+
+        /* Áreas de atuação: texto à esquerda, imagem à direita */
+        .areas-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+        .area-card {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            background: var(--primary-white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-subtle);
+        }
+        .area-card .content {
+            flex: 1 1 400px;
+        }
+        .area-card .image {
+            flex: 1 1 400px;
+            height: 350px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+        .area-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-black);
+        }
+        .area-card p {
+            margin-bottom: 1rem;
+        }
+        .area-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        .area-card th, .area-card td {
+            padding: 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .cta-card {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            padding: 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            margin-top: 1rem;
+            width: fit-content;
+        }
+        .cta-card:hover {
+            background: var(--gold-accent);
+        }
+
+        /* Artigos */
+        .artigos {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--text-light);
+        }
+
+        /* Quem Somos */
+        .quem-somos {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .quem-somos img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            margin: 0 auto 2rem;
+            display: block;
+        }
+
+        /* Contato */
+        form {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        input, textarea {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        button {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: var(--gold-accent);
+        }
+        #map {
+            height: 300px;
+            border-radius: 10px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-black);
+            color: var(--primary-white);
+            padding: 3rem 5% 1rem;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-content a {
+            color: var(--primary-white);
+            text-decoration: none;
+        }
+        .social-footer {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .social-footer a {
+            color: var(--primary-white);
+            text-decoration: none;
+        }
+        .social-footer a:hover i {
+            color: var(--gold-accent);
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+                align-items: stretch;
+            }
+            nav ul {
+                flex-direction: row;
+                overflow-x: auto;
+                gap: 1rem;
+            }
+            .hero {
+                justify-content: center;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 26px;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .hero-ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+            section {
+                padding: 3rem 5%;
+            }
+            .area-card {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <div class="brand-main">GRAÇAS</div>
+            <div class="brand-line"></div>
+            <div class="brand-sub">Advocacia e Assessoria Jurídica</div>
+            <small>Dra. Fernanda Gabriela das Graças OAB/SP 385.718</small>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#previdenciario">Previdenciário</a></li>
+                <li><a href="#tributario">Tributário</a></li>
+                <li><a href="#civel">Cível</a></li>
+                <li><a href="#artigos">Artigos</a></li>
+                <li><a href="#quemsomos">Quem Somos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <i class="fab fa-facebook" onclick="window.open('https://www.facebook.com/share/184DXrhvh3/?mibextid=wwXIfr','#', 'noopener')"></i>
+            <i class="fab fa-instagram" onclick="window.open('https://www.instagram.com/advfernandaggracas?igsh=MXhweGQwMmVubG55dQ%3D%3D&utm_source=qr','#', 'noopener')"></i>
+            <i class="fab fa-tiktok" onclick="window.open('https://www.tiktok.com/@advfernandaggracas?_r=1&_t=ZS-93c1iDdjhd2','#', 'noopener')"></i>
+            <i class="fab fa-youtube" onclick="window.open('https://youtube.com/@advfernandaggracas?si=5rbIup0KbaZzhGZl','#', 'noopener')"></i>
+        </div>
+        <a href="#contato" class="cta-header">Fale Conosco</a>
+    </header>
+
+    <!-- WhatsApp -->
+    <div class="whatsapp-float" onclick="window.open('https://wa.me/5517996470020?text=Olá%20Dra.%20Fernanda,%20gostaria%20de%20mais%20informações', '_blank')">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Com quase uma década de atuação, oferecendo soluções jurídicas inovadoras e eficazes. Nosso compromisso é simples: defender seus direitos com agilidade, transparência e resultados reais. Conte conosco para transformar desafios em conquistas.</h1>
+            <div class="hero-ctas">
+                <a href="#contato" class="cta-hero cta-fale">Fale Conosco</a>
+                <a href="tel:+5517996470020" class="cta-hero cta-ligar">Ligar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section id="areas" class="areas-section">
+
+        <!-- Previdenciário - Aposentadoria por Idade -->
+        <div id="previdenciario" class="area-card">
+            <div class="content">
+                <h3>Aposentadoria por Idade</h3>
+                <p><strong>Aposentadoria por idade é o benefício concedido quando o segurado atinge a idade mínima exigida, independentemente do tempo de contribuição.</strong></p>
+                <p>Para trabalhadores urbanos, a idade mínima é de 65 anos para homens e 60 anos para mulheres, com pelo menos 15 anos de contribuição. Já para trabalhadores rurais, a idade mínima é de 65 anos para homens e 60 anos para mulheres, sem exigência de tempo de contribuição, desde que comprovada a atividade rural.</p>
+                <p>Esse benefício é ideal para quem já atingiu a idade mínima e deseja se aposentar sem se preocupar com o tempo de contribuição. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/aposentadoria-por-idade.jpg')"></div>
+        </div>
+
+        <!-- Previdenciário - Aposentadoria por Tempo de Contribuição -->
+        <div id="aposentadoria-tempo" class="area-card">
+            <div class="content">
+                <h3>Aposentadoria por Tempo de Contribuição</h3>
+                <p><strong>Aposentadoria por tempo de contribuição é o benefício concedido quando o segurado atinge o tempo mínimo de contribuição exigido, independentemente da idade.</strong></p>
+                <p>Para trabalhadores urbanos, o tempo mínimo é de 35 anos para homens e 30 anos para mulheres, com idade mínima de 60 anos para homens e 55 anos para mulheres. Já para trabalhadores rurais, o tempo mínimo é de 30 anos para homens e 25 anos para mulheres, sem exigência de idade mínima.</p>
+                <p>Esse benefício é ideal para quem já atingiu o tempo mínimo de contribuição e deseja se aposentar sem se preocupar com a idade. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/aposentadoria-por-tempo.jpg')"></div>
+        </div>
+
+        <!-- Previdenciário - Aposentadoria por Invalidez -->
+        <div id="aposentadoria-invalidez" class="area-card">
+            <div class="content">
+                <h3>Aposentadoria por Invalidez</h3>
+                <p><strong>Aposentadoria por invalidez é o benefício concedido quando o segurado é incapaz de trabalhar de forma permanente, após perícia médica.</strong></p>
+                <p>Para trabalhadores urbanos, é necessário ter pelo menos 12 meses de contribuição e ser considerado incapaz de forma permanente. Já para trabalhadores rurais, não há exigência de tempo de contribuição, desde que comprovada a atividade rural.</p>
+                <p>Esse benefício é ideal para quem sofreu acidente ou doença que o impediu de trabalhar de forma permanente. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/aposentadoria-por-invalidez.jpg')"></div>
+        </div>
+
+        <!-- Previdenciário - Auxílio-Doença -->
+        <div id="auxilio-doenca" class="area-card">
+            <div class="content">
+                <h3>Auxílio-Doença</h3>
+                <p><strong>Auxílio-doença é o benefício concedido quando o segurado é incapaz de trabalhar por mais de 15 dias consecutivos, após perícia médica.</strong></p>
+                <p>Para trabalhadores urbanos, é necessário ter pelo menos 12 meses de contribuição e ser considerado incapaz de forma temporária. Já para trabalhadores rurais, não há exigência de tempo de contribuição, desde que comprovada a atividade rural.</p>
+                <p>Esse benefício é ideal para quem sofreu acidente ou doença que o impediu de trabalhar por mais de 15 dias consecutivos. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/auxilio-doenca.jpg')"></div>
+        </div>
+
+        <!-- Previdenciário - Auxílio-Acidente -->
+        <div id="auxilio-acidente" class="area-card">
+            <div class="content">
+                <h3>Auxílio-Acidente</h3>
+                <p><strong>Auxílio-acidente é o benefício concedido quando o segurado sofre lesão permanente em decorrência de acidente de trabalho.</strong></p>
+                <p>Para trabalhadores urbanos, é necessário ter pelo menos 12 meses de contribuição e ser considerado incapaz de forma permanente. Já para trabalhadores rurais, não há exigência de tempo de contribuição, desde que comprovada a atividade rural.</p>
+                <p>Esse benefício é ideal para quem sofreu acidente de trabalho que o impediu de trabalhar de forma permanente. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/auxilio-acidente.jpg')"></div>
+        </div>
+
+        <!-- Previdenciário - Salário-Maternidade -->
+        <div id="salario-maternidade" class="area-card">
+            <div class="content">
+                <h3>Salário-Maternidade</h3>
+                <p><strong>Salário-maternidade é o benefício concedido quando a segurada dá à luz ou adota uma criança.</strong></p>
+                <p>Para trabalhadoras urbanas, é necessário ter pelo menos 10 meses de contribuição e ser considerada incapaz de forma temporária. Já para trabalhadoras rurais, não há exigência de tempo de contribuição, desde que comprovada a atividade rural.</p>
+                <p>Esse benefício é ideal para quem deu à luz ou adotou uma criança e precisa de apoio financeiro durante o período de licença. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/salario-maternidade.jpg')"></div>
+        </div>
+
+        <!-- Previdenciário - Auxílio-Reclusão -->
+        <div id="auxilio-reclusao" class="area-card">
+            <div class="content">
+                <h3>Auxílio-Reclusão</h3>
+                <p><strong>Auxílio-reclusão é o benefício concedido quando o segurado é preso e seus dependentes ficam sem renda.</strong></p>
+                <p>Para trabalhadores urbanos, é necessário ter pelo menos 24 meses de contribuição e ser considerado incapaz de forma permanente. Já para trabalhadores rurais, não há exigência de tempo de contribuição, desde que comprovada a atividade rural.</p>
+                <p>Esse benefício é ideal para quem é preso e seus dependentes ficam sem renda. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/auxilio-reclusao.jpg')"></div>
+        </div>
+
+        <!-- Previdenciário - BPC/LOAS -->
+        <div id="bpc-loas" class="area-card">
+            <div class="content">
+                <h3>BPC/LOAS</h3>
+                <p><strong>BPC/LOAS é o benefício concedido quando o segurado é idoso ou pessoa com deficiência e não possui renda.</strong></p>
+                <p>Para idosos, é necessário ter pelo menos 65 anos e não possuir renda. Já para pessoas com deficiência, não há exigência de idade mínima, desde que comprovada a deficiência e a falta de renda.</p>
+                <p>Esse benefício é ideal para quem é idoso ou pessoa com deficiência e não possui renda. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/bpc-loas.jpg')"></div>
+        </div>
+
+        <!-- Previdenciário - Aposentadoria Rural -->
+        <div id="aposentadoria-rural" class="area-card">
+            <div class="content">
+                <h3>Aposentadoria Rural</h3>
+                <p><strong>Aposentadoria rural é o benefício concedido quando o segurado é trabalhador rural e atinge a idade mínima exigida.</strong></p>
+                <p>Para trabalhadores rurais, a idade mínima é de 65 anos para homens e 60 anos para mulheres, sem exigência de tempo de contribuição, desde que comprovada a atividade rural.</p>
+                <p>Esse benefício é ideal para quem é trabalhador rural e deseja se aposentar sem se preocupar com o tempo de contribuição. É possível também fazer revisões para aumentar o valor do benefício, caso haja erro no cálculo ou na inclusão de contribuições.</p>
+                <a href="#contato" class="cta-card">Fale Conosco</a>
+            </div>
+            <div class="image" style="background-image: url('imagens/aposentadoria-rural.jpg')"></div>
+        </div>
+
+        <!-- Tributário -->
+<div id="tributario" class="area-card">
+    <div class="content">
+        <h3>Planejamento Tributário</h3>
+        <p><strong>Reduza legalmente sua carga tributária em até 30% com estratégias personalizadas.</strong></p>
+        <p>O planejamento tributário é uma estratégia legal que reorganiza suas operações para pagar menos impostos, sem sonegação. Para empresas, podemos migrar do Simples Nacional para Lucro Presumido com economia comprovada, ou estruturar holdings familiares que protegem patrimônio e reduzem IR sobre dividendos em 90%. Autônomos economizam com escolha correta de enquadramento fiscal e deduções máximas.</p>
+        
+        <h4>Recuperação Tributária</h4>
+        <p><strong>Resgate em média R$ 50 mil por empresa dos últimos 5 anos pagos a mais ao Fisco.</strong></p>
+        <p>Empresas brasileiras pagam em média 33,2% de impostos sobre faturamento, sendo 40% destes indevidos. Analisamos últimos 5 anos de suas guias (ICMS, PIS/COFINS, IPI) e recuperamos valores corrigidos pela SELIC. Exemplo real: clínica médica recuperou R$ 187 mil em 18 meses. Processo administrativo + judicial com 95% de sucesso.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Benefício</th>
+                    <th>Economia Média</th>
+                    <th>Prazo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Planejamento Tributário</td>
+                    <td>25-35% da carga</td>
+                    <td>30 dias</td>
+                </tr>
+                <tr>
+                    <td>Recuperação Tributos</td>
+                    <td>R$ 30-200 mil</td>
+                    <td>12-24 meses</td>
+                </tr>
+                <tr>
+                    <td>Holdings Familiares</td>
+                    <td>90% IR dividendos</td>
+                    <td>45 dias</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>✅ Diagnóstico GRATUITO: enviamos relatório em 7 dias mostrando quanto você pode economizar/recuperar.</strong></p>
+        <a href="#contato" class="cta-card">Quero Meu Diagnóstico Gratuito</a>
+    </div>
+    <div class="image" style="background-image: url('imagens/tributario.jpg')"></div>
+</div>
+        <!-- Cível - Família e Sucessões -->
+<div id="civel" class="area-card">
+    <div class="content">
+        <h3>Família e Sucessões</h3>
+        <p><strong>Proteja seu patrimônio familiar e garanta justiça para seus filhos em 100% dos casos.</strong></p>
+        
+        <h4>Direito de Família</h4>
+        <p>Divórcios rápidos (30 dias), guarda compartilhada com equilíbrio emocional, pensão alimentícia justa (reduzimos até 40% em casos abusivos), regulamentação de visitas com mediação familiar. Atuamos em inventários extrajudiciais (economia de 50% em custas) e planejamento familiar para evitar conflitos futuros.</p>
+        
+        <h4>Planejamento Sucessório</h4>
+        <p><strong>Evite ITCMD de 4-8% e inventário judicial de 3 anos com HOLDING FAMILIAR.</strong></p>
+        <p>Estruturamos holdings que transferem bens em vida (sem ITCMD), protegem contra divórcios e credores, e garantem que 100% do patrimônio chegue aos herdeiros certos. Exemplo: família com R$ 5M em imóveis economizou R$ 350 mil em impostos e evitou briga judicial de 5 anos.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Vantagem Principal</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Divórcio Amigável</td>
+                    <td>30 dias + sem briga</td>
+                    <td>R$ 8 mil economia</td>
+                </tr>
+                <tr>
+                    <td>Holding Familiar</td>
+                    <td>0% ITCMD + proteção</td>
+                    <td>R$ 200 mil+ economia</td>
+                </tr>
+                <tr>
+                    <td>Inventário Extrajudicial</td>
+                    <td>3 meses vs 3 anos</td>
+                    <td>60% menos custos</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><strong>✅ Consulta ESTRATÉGICA GRATUITA: simulamos seu caso e mostramos economia real em 48h.</strong></p>
+        <a href="#contato" class="cta-card">Quero Minha Consulta Estratégica</a>
+    </div>
+    <div class="image" style="background-image: url('imagens/civil.jpg')"></div>
+</div>
+    </section>
+
+  <!-- Artigos -->
+<section id="artigos">
+    <h2>Artigos Jurídicos</h2>
+    <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); margin-bottom: 4rem;">
+        Conteúdo técnico atualizado sobre seus direitos previdenciários, tributários e sucessórios.
+    </p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+        
+       <!-- Card 1: CadÚnico (FUNCIONANDO) -->
+<a href="artigos/cadunico-direitos-sociais.html" class="artigo-link">
+    <div class="area-card" style="padding: 2.5rem; height: 280px; display: flex; flex-direction: column; justify-content: space-between; border: none; background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%); transition: all 0.3s;">
+        <div>
+            <h3 style="margin-bottom: 1rem; color: var(--primary-black); font-size: 1.4rem;">
+                <i class="fas fa-id-card" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>
+                CadÚnico: R$1.412 BPC + Bolsa Família
+            </h3>
+            <p style="color: var(--text-light); line-height: 1.5;">
+                <strong>70% têm CadÚnico errado = benefício NEGADO.</strong><br>
+                CRAS, documentos e aprovação em 45 dias.
+            </p>
+        </div>
+        <div style="margin-top: auto;">
+            <span style="color: var(--gold-accent); font-weight: 500; font-size: 0.9rem;">
+                Ler artigo completo →
+            </span>
+        </div>
+    </div>
+</a>
+        <!-- Card 2: Recuperação Tributária -->
+        <a href="artigo-icms.html" class="artigo-link">
+            <div class="area-card" style="padding: 2.5rem; height: 280px; display: flex; flex-direction: column; justify-content: space-between; border: none; background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); transition: all 0.3s;">
+                <div>
+                    <h3 style="margin-bottom: 1rem; color: var(--primary-black); font-size: 1.4rem;">
+                        <i class="fas fa-coins" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>
+                        Tese ICMS 12% x 7%: Recupere R$ 50 mil
+                    </h3>
+                    <p style="color: var(--text-light); line-height: 1.5;">
+                        <strong>STF confirmou:</strong> empresas recuperam 5 anos de ICMS pagos a mais.<br>
+                        Guias, valores e processo completo.
+                    </p>
+                </div>
+                <div style="margin-top: auto;">
+                    <span style="color: var(--gold-accent); font-weight: 500; font-size: 0.9rem;">
+                        Ler artigo completo →
+                    </span>
+                </div>
+            </div>
+        </a>
+
+        <!-- Card 3: Holding Familiar -->
+        <a href="artigo-holding.html" class="artigo-link">
+            <div class="area-card" style="padding: 2.5rem; height: 280px; display: flex; flex-direction: column; justify-content: space-between; border: none; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); transition: all 0.3s;">
+                <div>
+                    <h3 style="margin-bottom: 1rem; color: var(--primary-black); font-size: 1.4rem;">
+                        <i class="fas fa-building" style="color: var(--gold-accent); margin-right: 0.5rem;"></i>
+                        Holding Familiar: 0% ITCMD + proteção
+                    </h3>
+                    <p style="color: var(--text-light); line-height: 1.5;">
+                        <strong>Inventário 3 anos? Holding resolve em 45 dias.</strong><br>
+                        Economia comprovada de R$ 200 mil em impostos.
+                    </p>
+                </div>
+                <div style="margin-top: auto;">
+                    <span style="color: var(--gold-accent); font-weight: 500; font-size: 0.9rem;">
+                        Ler artigo completo →
+                    </span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    
+    <div style="text-align: center; margin-top: 4rem;">
+        <a href="#contato" class="cta-hero cta-fale" style="font-size: 1.2rem; padding: 1.2rem 3rem; display: inline-block;">
+            Receba Todos os Artigos + Análise Personalizada Gratuita
+        </a>
+    </div>
+</section>
+
+<!-- Adicione este CSS no final da seção <style> do head -->
+<style>
+.artigo-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.artigo-link:hover .area-card {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+</style>
+    <!-- Quem Somos -->
+    <section id="quemsomos" class="quem-somos">
+        <h2>Quem Somos</h2>
+        <img src="imagens/dra-fernanda.jpg" alt="Dra. Fernanda Gabriela das Graças">
+        <p>Assessoria jurídica estratégica, humana e comprometida com resultados.
+
+ Graças Advocacia e Assessoria Jurídica atua de forma personalizada nas áreas do Direito Previdenciário, Tributário e Cível, oferecendo soluções jurídicas seguras, atualizadas e alinhadas às necessidades reais de cada cliente.
+
+Sob a liderança da Dra. Fernanda Gabriela das Graças (OAB/SP 385.718), o escritório construiu sua trajetória com base na experiência prática, estudo constante e atuação ética, sempre priorizando a clareza das informações e a defesa responsável dos direitos de seus clientes.
+
+Mais do que prestar serviços jurídicos, acreditamos em uma advocacia próxima, transparente e estratégica, que analisa cada caso de forma individualizada, buscando não apenas a solução do problema, mas também a tranquilidade e a segurança jurídica de quem confia em nosso trabalho.
+
+Nosso compromisso é oferecer um atendimento sério, acessível e eficiente, unindo conhecimento técnico, inovação e dedicação em cada etapa do processo.</p>
+        <div class="hero-ctas" style="justify-content: center; gap: 1rem; margin-top: 2rem;">
+            <a href="#contato" class="cta-hero cta-fale">Fale Conosco</a>
+            <a href="tel:+5517996470020" class="cta-hero cta-ligar">Ligar Agora</a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">
+            Edifício Terrace Business Center, sala 112 – Três Lagoas, Mato Grosso do Sul.<br>
+            (17) 99647‑0020
+        </p>
+        <form id="contactForm">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu Email" required>
+            <textarea rows="5" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1770219197107!6m8!1m7!1sxcGwEkrE5jZ62FaRBuCl3A!2m2!1d-20.78589363890744!2d-51.70151667207428!3f120.126495!4f0!5f0.7820865974627469" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p style="text-align: center; margin-top: 1rem;">
+            <i class="fas fa-phone"></i> (17) 99647‑0020 |
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <strong>Graças Advocacia e Assessoria Jurídica</strong><br>
+                Dra. Fernanda Gabriela das Graças<br>
+                OAB/SP 385.718
+            </div>
+            <div>
+                <a href="#inicio">Início</a> | <a href="#areas">Áreas</a> | <a href="#contato">Contato</a>
+            </div>
+        </div>
+        <div class="social-footer">
+            <a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2026 Graças Advocacia. Todos os direitos reservados. | <a href="#contato" style="color: var(--gold-accent);">Fale Conosco</a></p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submit
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mensagem enviada! Entraremos em contato em breve.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
